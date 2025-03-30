@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Script to set up an Ubuntu 20.04+ server
-# (with minimum 16GB RAM, 8 threads CPU) for android ROM compiling
+# (with minimum 32GB RAM, 16 threads CPU) for AOSP compiling
 #
 # Sudo access is mandatory to run this script
 #
@@ -58,7 +58,7 @@ fi
 
 echo -e "\nInstalling apktool and JADX..."
 mkdir -p bin
-wget -q https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.10.0.jar -O bin/apktool.jar
+wget -q https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.11.1.jar -O bin/apktool.jar
 echo 'alias apktool="java -jar $HOME/bin/apktool.jar"' >> $sh_rc
 
 wget -q https://github.com/skylot/jadx/releases/download/v1.5.1/jadx-1.5.1.zip -O jadx.zip
